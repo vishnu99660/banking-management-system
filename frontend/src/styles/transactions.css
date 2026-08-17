@@ -1,0 +1,165 @@
+/* Transactions Styles */
+.transactions-container {
+  flex: 1;
+  overflow-y: auto;
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-xl);
+}
+
+.transactions-header {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.transactions-header h1 {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: var(--font-3xl);
+}
+
+.transactions-header p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-lg);
+}
+
+.transactions-table-wrapper {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table thead {
+  background-color: var(--bg-tertiary);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.transactions-table th {
+  padding: var(--spacing-lg);
+  text-align: left;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  font-size: var(--font-xs);
+  letter-spacing: 0.5px;
+}
+
+.transactions-table tbody tr {
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color var(--transition-fast);
+}
+
+.transactions-table tbody tr:hover {
+  background-color: var(--bg-tertiary);
+}
+
+.transactions-table td {
+  padding: var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+.tx-type {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: var(--font-xs);
+  text-transform: capitalize;
+}
+
+.transaction-row.deposit .tx-type {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.transaction-row.withdraw .tx-type {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.transaction-row.transfer .tx-type {
+  background-color: #dbeafe;
+  color: #0284c7;
+}
+
+.amount {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.transaction-row.withdraw .amount,
+.transaction-row.transfer .amount {
+  color: var(--text-primary);
+}
+
+.status {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background-color: #d1fae5;
+  color: #059669;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: var(--font-xs);
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.status.failed {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.no-data {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--text-secondary);
+}
+
+.error-message {
+  padding: var(--spacing-lg);
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+  border-left: 4px solid #dc2626;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .transactions-container {
+    padding: var(--spacing-lg);
+  }
+
+  .transactions-table {
+    font-size: var(--font-sm);
+  }
+
+  .transactions-table th,
+  .transactions-table td {
+    padding: var(--spacing-md);
+  }
+
+  .transactions-header h1 {
+    font-size: var(--font-2xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .transactions-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .transactions-table {
+    min-width: 600px;
+  }
+}

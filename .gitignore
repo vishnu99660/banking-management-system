@@ -1,0 +1,19 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Python generated files and virtual environments
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Node.js generated files
+node_modules/
+dist/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store

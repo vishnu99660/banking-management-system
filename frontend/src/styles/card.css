@@ -1,0 +1,129 @@
+/* Card Styles */
+.card {
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  border: 1px solid var(--border-color);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: var(--font-lg);
+}
+
+.card-body {
+  padding: var(--spacing-lg);
+}
+
+.card-footer {
+  padding: var(--spacing-lg);
+  background-color: var(--bg-tertiary);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+/* Balance Card */
+.balance-card {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-lg);
+}
+
+.balance-card .card-body {
+  padding: var(--spacing-2xl) var(--spacing-lg);
+}
+
+.balance-card h3 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-base);
+  font-weight: 500;
+  margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.balance-amount {
+  font-size: var(--font-4xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.balance-accounts {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: var(--font-sm);
+}
+
+/* Account Card */
+.account-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-card .card-header {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.account-card h3 {
+  font-size: var(--font-lg);
+  margin-bottom: var(--spacing-xs);
+}
+
+.account-number {
+  font-size: var(--font-sm);
+  color: var(--text-tertiary);
+  font-weight: 400;
+}
+
+.account-balance {
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.account-type {
+  color: var(--text-tertiary);
+  font-size: var(--font-sm);
+  margin: 0;
+}
+
+.account-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background-color: var(--bg-tertiary);
+}
+
+.account-actions-group {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background-color: var(--bg-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card-header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+}

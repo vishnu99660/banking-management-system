@@ -1,0 +1,179 @@
+/* Dashboard Styles */
+.dashboard-container {
+  flex: 1;
+  overflow-y: auto;
+  background-color: var(--bg-secondary);
+  padding: var(--spacing-xl);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2xl);
+  gap: var(--spacing-xl);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: var(--font-3xl);
+}
+
+.dashboard-header p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-lg);
+}
+
+.dashboard-error {
+  padding: var(--spacing-lg);
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-lg);
+  border-left: 4px solid #dc2626;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
+}
+
+.balance-card {
+  background: var(--gradient-primary);
+  color: white;
+  box-shadow: var(--shadow-lg);
+}
+
+.balance-card h3 {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--spacing-md);
+}
+
+.balance-amount {
+  font-size: var(--font-4xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+}
+
+.balance-accounts {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  font-size: var(--font-sm);
+}
+
+.accounts-section {
+  margin-top: var(--spacing-2xl);
+}
+
+.accounts-section h2 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-primary);
+}
+
+.accounts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.account-card {
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.account-card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.account-card .card-header {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+}
+
+.account-card .card-header h3 {
+  font-size: var(--font-lg);
+  margin: 0;
+}
+
+.account-number {
+  font-size: var(--font-sm);
+  color: var(--text-tertiary);
+}
+
+.account-balance {
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.account-type {
+  color: var(--text-tertiary);
+  font-size: var(--font-sm);
+  margin: 0;
+}
+
+.no-accounts {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 2px dashed var(--border-color);
+}
+
+.no-accounts p {
+  font-size: var(--font-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.loading {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--text-secondary);
+  font-size: var(--font-lg);
+}
+
+.account-details-modal {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.account-detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.account-detail-row span {
+  color: var(--text-secondary);
+}
+
+.account-detail-row strong {
+  color: var(--text-primary);
+  overflow-wrap: anywhere;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: var(--spacing-lg);
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .accounts-grid {
+    grid-template-columns: 1fr;
+  }
+}

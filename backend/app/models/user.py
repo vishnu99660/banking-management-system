@@ -1,0 +1,16 @@
+from sqlalchemy import Column, Integer, String, DateTime
+from datetime import datetime
+
+from app.database.connection import Base
+
+
+class User(Base):
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    full_name = Column(String(100), nullable=False)
+    email = Column(String(100), unique=True, nullable=False, index=True)
+    phone = Column(String(15), unique=True, nullable=False)
+    address = Column(String(255))
+    password_hash = Column(String(255), nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
